@@ -51,3 +51,14 @@ do
 		fi
 	fi
 done
+echo "Head = $Hcount"
+echo "Tail = $Tcount"
+ 
+if [ $Hcount -gt $Tcount ]
+then 
+   Head=$(( ($Hcount)-($Tcount) ))
+echo "Head Win by $Head times"
+else
+Tail=$(( ($Tcount)-($Hcount) ))
+echo "Tail Win by $Tail times"
+fi
